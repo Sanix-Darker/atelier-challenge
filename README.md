@@ -4,6 +4,8 @@ The CatMash challenge.
 
 <img src="./catmash.gif" />
 
+Test it online [HERE](https://sanix.me)
+
 ## BackEnd [NodeJs]
 
 I made the backend using NodeJs.
