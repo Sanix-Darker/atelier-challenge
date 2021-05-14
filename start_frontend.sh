@@ -1,4 +1,4 @@
 cd frontend
 yarn build
-http-server -p 3000
+http-server -p 9002
 
