@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 // All routes for cat.route
 import controller from '../controllers/cat.controller.js';
 
@@ -20,7 +21,7 @@ const catRoutes = (router) => {
   });
 
     // The route for updating the score of a cat
-  router.put(`${prefix}/scores/:cat_id`, (req, res) => {
+  router.post(`${prefix}/scores/:cat_id`, (req, res) => {
     controller.updateScore(req, res);
   });
 };

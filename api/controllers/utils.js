@@ -7,7 +7,7 @@ export const paginateResults = (array, pageSize, pageNumber) => {
 };
 
 /**
- *
+ * This method will get the actual database
  * @returns
  */
 export const getDatabase = () => {
@@ -16,7 +16,11 @@ export const getDatabase = () => {
   return JSON.parse(data);
 };
 
-
+/**
+ * This method will set the whole database
+ * @param {*} datas
+ * @returns
+ */
 export const setDatabase = (datas) => {
   return fs.writeFileSync(`${process.env.DB_PATH}`, JSON.stringify(datas));
 };
@@ -40,7 +44,6 @@ export const getCatPeer = () => {
   };
 };
 
-
 /**
  * This method will get sorted array of cat and then paginate it
  * @param {*} page
@@ -54,11 +57,15 @@ export const getCatScores = (page) => {
   return paginateResults(sortedArray, 10, page);
 };
 
-
+/**
+ * This method will update a score for a cat by a cat-id
+ * @param {*} catID
+ */
 export const updateCatScore = (catID) => {
   const database = getDatabase();
 
-  const ind = database.findIndex(item => item['id'] === catID);
+  const ind = database.findIndex(item => item['id'] === parseInt(catID, 10));
+
   if (ind !== -1) {
     database[ind]['score'] += 1;
     setDatabase(database);

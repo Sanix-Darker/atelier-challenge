@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 // All functions for the controller
 import { getCatPeer, getCatScores, updateCatScore } from './utils.js';
 

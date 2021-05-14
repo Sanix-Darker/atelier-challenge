@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 // Essential imports
 import express from 'express';
 import http from 'http';
