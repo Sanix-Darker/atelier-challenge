@@ -17,6 +17,10 @@ export const getDatabase = () => {
 };
 
 
+export const setDatabase = (datas) => {
+  return fs.writeFileSync(`${process.env.DB_PATH}`, JSON.stringify(datas));
+};
+
 /**
  *  This function will choose randomly 2 different cat in the list
  * @returns
@@ -48,4 +52,15 @@ export const getCatScores = (page) => {
   const sortedArray = database.sort((a, b) => b.score - a.score);
 
   return paginateResults(sortedArray, 10, page);
+};
+
+
+export const updateCatScore = (catID) => {
+  const database = getDatabase();
+
+  const ind = database.findIndex(item => item['id'] === catID);
+  if (ind !== -1) {
+    database[ind]['score'] += 1;
+    setDatabase(database);
+  }
 };

@@ -1,5 +1,5 @@
 // All functions for the controller
-import { getCatPeer, getCatScores } from './utils.js';
+import { getCatPeer, getCatScores, updateCatScore } from './utils.js';
 
 const controller = {};
 
@@ -11,7 +11,7 @@ controller.getPeer = async (req, res) => {
     };
     res.json(result);
   } catch (err) {
-    res.status(400).json({ error: 'Error on getting cats.' });
+    res.status(400).json({ error: 'Error on getting cat peers.' });
   }
 };
 
@@ -29,7 +29,12 @@ controller.getScores = async (req, res) => {
 
 controller.updateScore = async (req, res) => {
   try {
-
+    const catID = req.params.cat_id;
+    updateCatScore(catID);
+    const result = {
+      result: 'Updated successfully !',
+    };
+    res.json(result);
   } catch (err) {
     res.status(400).json({ error: 'Error updating score for a cat.' });
   }

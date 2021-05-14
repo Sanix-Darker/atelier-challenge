@@ -19,9 +19,10 @@ yarn db
 
 - Third you need to start the server by running:
 ```shell
-yarn server
-# This will start the json-server directly into ./data/db.json
-# and it will be running on port 9001
+yarn dev
+# This will start the server on development
+yarn start
+# This will start the server on production
 ```
 
 ## How to launch

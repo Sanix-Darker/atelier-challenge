@@ -21,7 +21,7 @@ const fetchImages = async () => {
     };
   });
 
-  fs.writeFileSync('./data/db.json', JSON.stringify(catsDb));
+  fs.writeFileSync(`${process.env.DB_PATH}`, JSON.stringify(catsDb));
 };
 
 // We fetched image and set our database
