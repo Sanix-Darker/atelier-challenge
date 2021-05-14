@@ -1,2 +1,4 @@
 cd frontend
-yarn start
+yarn build
+http-server -p 3000
+
