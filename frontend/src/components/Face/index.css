@@ -1,0 +1,25 @@
+.face {
+    height: 30em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.face img{
+    max-width: 100%;
+    cursor: pointer;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.7);
+
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transition: all 0.4s;
+}
+
+.face img:hover{
+    min-width: 120%;
+    min-height: 120%;
+    box-shadow: 0 4px 7px rgba(0,0,0,0.7);
+    transition: all 0.6s;
+}
