@@ -11,8 +11,8 @@ const App = () => {
       <div className="container">
         <Header />
         <br/>
-        <Route path="/" exact component={Home} />
-        <Route path="/scores" component={Scores} />
+        <Route path={["/", "/catmash"]} exact component={Home} />
+        <Route path="/scores" exact component={Scores} />
         <Footer />
       </div>
     </Router>
