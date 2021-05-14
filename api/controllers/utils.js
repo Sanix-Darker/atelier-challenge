@@ -2,15 +2,19 @@
 import fs from 'fs';
 
 
+export const paginateResults = (array, pageSize, pageNumber) => {
+  return array.slice((pageNumber - 1) * pageSize, pageNumber * pageSize);
+};
+
 /**
  *
  * @returns
  */
 export const getDatabase = () => {
-    const data = fs.readFileSync(`${process.env.DB_PATH}`, { encoding: 'utf8', flag: 'r' });
+  const data = fs.readFileSync(`${process.env.DB_PATH}`, { encoding: 'utf8', flag: 'r' });
     // parse JSON string to JSON object
-    return JSON.parse(data);
-}
+  return JSON.parse(data);
+};
 
 
 /**
@@ -33,8 +37,15 @@ export const getCatPeer = () => {
 };
 
 
+/**
+ * This method will get sorted array of cat and then paginate it
+ * @param {*} page
+ * @returns
+ */
 export const getCatScores = (page) => {
-    const database = getDatabase();
+  const database = getDatabase();
 
-    const sortedArray = database.sort((a,b) =>  a.score-b.score )
-}
+  const sortedArray = database.sort((a, b) => b.score - a.score);
+
+  return paginateResults(sortedArray, 10, page);
+};
