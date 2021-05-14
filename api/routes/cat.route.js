@@ -7,7 +7,7 @@ import controller from '../controllers/cat.controller.js';
  * @param {*} router
  */
 const catRoutes = (router) => {
-  const prefix = '/cats';
+  const prefix = `${process.env.API_BASE}/cats`;
 
     // The route to get cats
   router.get(`${prefix}`, (req, res) => {
