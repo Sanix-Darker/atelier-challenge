@@ -6,7 +6,7 @@
     "dev": "nodemon ./index.js --exec babel-node",
     "start": "node ./index.js --exec babel-node",
     "db": "node ./setDB.js --exec babel-node",
-    "test": "mocha"
+    "test": "jest --verbose"
   },
   "keywords": [
     "Node.js",
@@ -18,18 +18,17 @@
     "axios": "^0.21.1",
     "body-parser": "^1.15.2",
     "cors": "^2.8.0",
-    "dotenv": "^6.0.0",
+    "dotenv": "^9.0.2",
     "express": "^4.17.1",
-    "lodash": "^4.15.0",
-    "mocha": "^8.3.2",
+    "jest": "^26.6.3",
     "moment": "^2.22.2"
   },
   "devDependencies": {
-    "apidoc": "^0.17.6",
-    "babel-cli": "6.16.0",
+    "apidoc": "^0.27.1",
+    "babel-cli": "6.26.0",
     "babel-core": "^6.17.0",
-    "babel-eslint": "^7.0.0",
-    "babel-plugin-inline-import": "^2.0.1",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-inline-import": "^3.0.0",
     "babel-plugin-transform-async-to-module-method": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -39,11 +38,11 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-runtime": "^6.26.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^12.0.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.0.1",
-    "eslint-plugin-react": "^6.4.1",
-    "nodemon": "^1.9.1"
+    "eslint-plugin-react": "^7.23.2",
+    "nodemon": "^2.0.7"
   },
   "eslintConfig": {
     "parser": "babel-eslint",

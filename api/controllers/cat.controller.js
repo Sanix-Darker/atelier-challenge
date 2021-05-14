@@ -4,7 +4,6 @@ import { getCatPeer, getCatScores, updateCatScore } from './utils.js';
 
 const controller = {};
 
-
 controller.getPeer = async (req, res) => {
   try {
     const result = {
