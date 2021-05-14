@@ -7,6 +7,8 @@ import dotenv from 'dotenv';
 
 // We import our routes
 import catRoutes from './routes/cat.route.js';
+import homeRoutes from './routes/home.route.js';
+
 
 dotenv.config();
 
@@ -21,6 +23,7 @@ app.use(express.json());
 
 // subscribe routes
 catRoutes(router);
+homeRoutes(router);
 app.use(router);
 
 server.listen(port, () => {

@@ -46,6 +46,7 @@ const Home = () => {
 
     return (
         <div>
+            <br/><br/><br/>
             <h1 style={{textAlign: "center"}}>
                 Choose The Cutest Cat !!!
             </h1>

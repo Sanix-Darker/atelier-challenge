@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const Header = () => {
     return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light"
-                style={{position: "fixed", width: "100%", borderBottom: "1px solid rgb(200, 200, 200)"}}>
+                style={{position: "fixed", width: "100%", background: "white"}}>
                 <button className="navbar-toggler"
                         type="button" data-toggle="collapse"
                         data-target="#navbarTogglerDemo01"

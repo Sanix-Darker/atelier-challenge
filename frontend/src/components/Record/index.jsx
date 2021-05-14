@@ -8,7 +8,7 @@ const Record = ({img, score}) => {
                 <img src={img} alt="img" className="catimg"/>
             </td>
             <td>
-                <h2 className="catscore">{score}</h2>
+                <span className="catscore">{score}</span>
             </td>
         </tr>
     )
